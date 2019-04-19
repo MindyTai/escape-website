@@ -536,8 +536,9 @@ article {
       }
     }
     p{
-      line-height: 160px;
+      line-height: 30px;
       font-size: 18px;
+      margin-top: 90px;
       @include media-breakpoint-only(sm){
         text-align: center;
       }
