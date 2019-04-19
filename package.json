@@ -58,7 +58,7 @@
     "start-js": "node scripts/start.js",
     "start": "npm-run-all -p start-js",
     "build-js": "node scripts/build.js",
-    "build-css":"node-sass src/index.scss",
+    "build-css": "node-sass src/index.scss",
     "build": "npm-run-all build-css build-js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
@@ -109,5 +109,5 @@
     "node-sass": "^4.9.3",
     "sass-loader": "^7.1.0"
   },
-  "homepage":"https://mindytai.github.io/escape-website"
+  "homepage": "https://mindytai.github.io/escape-website"
 }
