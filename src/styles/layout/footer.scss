@@ -1,0 +1,119 @@
+footer {
+  background-color: $white-25;
+  color: $grey-100;
+  font-size: 14px;
+  display: block;
+  width: 100%;
+  img {
+    max-width: 100%;
+    filter: grayscale(100%);
+    cursor: pointer;
+    &:hover {
+      filter: none;
+    }
+  }
+  .footer-list {
+    ul li {
+      line-height: 30px;
+      display: inline;
+      list-style-type: none;
+      font-weight: bold;
+      a {
+        text-decoration: none;
+        color: $grey-100;
+        cursor: pointer;
+        &:hover {
+          color: $red;
+        }
+        &.active{
+          color: $red;
+        }
+      }
+    }
+  }
+  .footer-info {
+    strong {
+      color: $red;
+      font-size: 21px;
+    }
+    p {
+      white-space: nowrap;
+      margin-bottom: 0;
+      a {
+        text-decoration: none;
+        cursor: pointer;
+        color: $grey-100;
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+    .address {
+      white-space: nowrap;
+      color: $grey-100;
+      a {
+        text-decoration: none;
+        cursor: pointer;
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+    .info {
+      display: flex;
+      padding: 0;
+    }
+    .left-part {
+      .social-icons {
+        .fa {
+          color: $black;
+          border: $grey-75 2px solid;
+          border-radius: 50%;
+          height: 40px;
+          width: 40px;
+          font-size: 22px;
+          line-height: 40px;
+          text-align: center;
+          &:hover {
+            color: $red;
+            border: $red 2px solid;
+          }
+        }
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-only(md) {
+    padding: 35px 10px;
+    .footer-info {
+      margin-left: -250px;
+      padding-top: 35px;
+    }
+    .company {
+      padding-top: 0px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 45px 0px;
+    .info {
+      flex-wrap: wrap;
+    }
+    .footer-list {
+      line-height: 30px;
+      ul li {
+        margin-right: 10px;
+      }
+    }
+    .footer-info {
+      margin-left: -15px;
+      .left-part {
+        padding: 0px 20px;
+      }
+      .right-part {
+        padding: 10px 20px;
+      }
+    }
+  }
+}

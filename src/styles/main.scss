@@ -1,0 +1,16 @@
+//common
+@import "./common/variables.scss";
+
+// library
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+// layout
+@import "./layout/nav.scss";
+@import "./layout/footer.scss";
+@import "./layout/scroll_btn.scss";
+
+// page
+@import "./page/index.scss";
+@import "./page/index_content.scss";
+@import "./page/contact_content.scss"
+
