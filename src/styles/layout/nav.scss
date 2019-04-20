@@ -125,7 +125,7 @@
       transition: height .5s ease;
       display: block;
       &.active { 
-        height: 350px;
+        height: 250px;
       }
       li {
         cursor: pointer;
@@ -178,4 +178,16 @@
   li {
     padding: 15px 7px;
   }
+}
+
+@include media-breakpoint-only(xs){
+  .nav-bar{
+    .menu{
+      img {
+        max-width: 40%;
+      }
+    }
+    
+  }
+ 
 }

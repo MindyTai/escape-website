@@ -31,7 +31,7 @@ class Character extends React.Component {
                         <span className="close">&times;</span>
                       </div>
                       <div className="modal-body">
-                      <p className="statement">{data.statement}</p> 
+                      <p className={`statement`}>{data.statement}</p> 
                       </div>  
                     </div>
                   </div>

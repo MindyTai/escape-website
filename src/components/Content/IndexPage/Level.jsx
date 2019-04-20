@@ -100,8 +100,9 @@ class Level extends React.Component {
                           <span className="close">&times;</span>
                         </div>
                         <div className="modal-body mb-5">
-                          <model-viewer src={data.model} alt="A 3D model of an astronaut" auto-rotate camera-controls background-color="#455A64" style={{height: 50+ '%', width: 300+ 'px', borderRadius: 5 + '%', outline: 'none',position: 'relative', margin: 'auto'}}></model-viewer>
-                          <p className="statement p-5">{data.statement}</p>
+                          <model-viewer src={data.model} alt="A 3D model" auto-rotate camera-controls background-color="#455A64" class="glb"></model-viewer>
+                          <p className="statement pt-3 pl-3 pr-3">{data.statement}</p>
+                          <div className="spin">模型可以旋轉喔!</div>
                         </div>
                       </div>
                     </div>

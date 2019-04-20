@@ -49,7 +49,7 @@ class AvatarSlider extends React.Component {
                   </div>
                   <div className="col-sm-12 col-md-8 col-lg-8">
                     <span className="title">{ data.title }</span>
-                    <p> {data.statement} </p>
+                    <p className={ `p-${i}`}> {data.statement} </p>
                   </div>
                 </div>
               </div>

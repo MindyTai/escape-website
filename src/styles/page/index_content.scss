@@ -6,6 +6,9 @@ header {
   @include media-breakpoint-up(md){
     margin-bottom: 75px;
   }
+  @include media-breakpoint-down(xs){
+    margin-bottom: 60px;
+  }
 }
 
 article {
@@ -22,13 +25,21 @@ article {
   width: 100%;
   position: relative;
   overflow: hidden;
+  @include media-breakpoint-only(xs){
+    height: 200px;
+  }
   @include media-breakpoint-only(sm){
     height: 300px;
   }
+ 
   #myVideo { 
     right: 0;
     bottom: 0;
-    max-width: 100%;     
+    max-width: 100%;
+    @include media-breakpoint-down(sm){
+      top: 20px;
+      position: relative;
+    }    
   }
   .typewriter {
     height: 100px;
@@ -58,6 +69,11 @@ article {
     blink-caret .75s step-end infinite;
     @include media-breakpoint-only(sm){
       font-size: 30px;
+    }
+    @include media-breakpoint-only(xs){
+      font-size: 20px;
+      top: 35px;
+      position: relative;
     }
   }
   @keyframes typing {
@@ -125,6 +141,9 @@ article {
       margin: 0 0 0 -40px;
       position: absolute;
     }
+    @include media-breakpoint-down(xs){
+      font-size: 18px;
+    }
   }
   a {
     cursor: pointer;
@@ -135,6 +154,9 @@ article {
   }
   p {
     font-size: 18px;
+    @include media-breakpoint-down(xs){
+      font-size: 15px;
+    }
   }
   @include media-breakpoint-up(md) {
     padding-top: 20px;
@@ -175,13 +197,16 @@ article {
     margin: auto;
     padding: 0;
     border: 1px solid #888;
-    width: 60%;
-    height: 60%;
+    width: 70%;
+    height: 75%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
     animation-duration: 0.4s;
+    @include media-breakpoint-up(lg){
+      height: 90%;
+    }
   }
   
   /* Add Animation */
@@ -218,9 +243,28 @@ article {
   }
   
   .modal-body {
-    padding: 80px 16px;
+    padding: 20px 16px;
     margin: auto;
-  } 
+    @include media-breakpoint-down(sm){
+      padding: 15px;
+      width: 219px;
+    }
+  }
+  .glb {
+    height: 50%;
+    width: 300px; 
+    border-radius: 5%; 
+    outline: none;
+    position: relative; 
+    margin: auto;
+    @include media-breakpoint-down(sm){
+      // height: 20%;
+      width: 100%; 
+    }
+    @include media-breakpoint-down(xs){
+      width: 70%; 
+    }
+  }
   
   .box {
     height: 300px;
@@ -228,8 +272,12 @@ article {
       top: 105px;
       position: relative;
     }
+    .img-1 {
+      top: 105px;
+      position: relative;
+    }
     .img-2 {
-      top: 50px;
+      top: 100px;
       position: relative;
     }
     .level-img {
@@ -259,6 +307,9 @@ article {
       margin: 0 0 0 -40px;
       position: absolute;
     }
+    @include media-breakpoint-down(xs){
+      font-size: 18px;
+    }
   }
   a {
     cursor: pointer;
@@ -267,8 +318,7 @@ article {
      /* Green */
     background-color: transparent;
     color: #701104;
-    border-color: #701104 
-   ; 
+    border-color: #701104; 
     padding: 5px 10px;
     text-align: center;
     text-decoration: none;
@@ -287,128 +337,34 @@ article {
   .title {
     font-size: 18px;
     font-weight: bold;
+    @include media-breakpoint-down(xs){
+      font-size: 15px;
+    }
   }
   p {
     font-size: 16px;
-  }
-  @include media-breakpoint-up(md) {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    .statement {
-      line-height: 30px;
+    @include media-breakpoint-down(sm){
+      font-size: 12px;
+      padding: 0px;
     }
   }
-}
-
-
-.character {
-  text-align: center; // position: absolute;
-  background-color: rgb(207, 207, 207); // top: 355px;
-  width: 100%;
-  color: $grey-100;
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  .statement{
+    width: 300px;
+    @include media-breakpoint-down(xs){
+      width: 200px;
+    }
   }
-  
-  /* Modal Content */
-  .modal-content {
-    position: relative;
-    background-color: #fefefe;
+  .spin {
+    width:200px;
+    height: 30px;
     margin: auto;
-    padding: 0;
-    border: 1px solid #888;
-    width: 80%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s
-  }
-  
-  /* Add Animation */
-  @-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0} 
-    to {top:0; opacity:1}
-  }
-  
-  @keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
-  }
-  
-  /* The Close Button */
-  .close {
-    color: white;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .modal-header {
-    padding: 2px 16px;
     background-color: #701104;
-    color: white;
-  }
-  
-  .modal-body {padding: 2px 16px;}
-  
-  .box {
-    height: 300px;
-    .level-img {
-     
-      -webkit-transition: margin 0.5s ease-out;
-      -moz-transition: margin 0.5s ease-out;
-      -o-transition: margin 0.5s ease-out;
-      &:hover {
-        margin-top: -15px;
-      }
+    color: #f7f7f7;
+    line-height: 30px;
+    @include media-breakpoint-down(xs){
+      font-size: 10px;
+      width:100px;
     }
-   
-  }
-  h5 {
-    text-align: center;
-    font-size: 24px;
-    position: relative;
-    &:after {
-      content: "";
-      width: 80px;
-      height: 5px;
-      background-color: #701104;
-      display: block; // position: absolute;
-      left: 50%;
-      bottom: -20px;
-      border-radius: 3px;
-      margin: 0 0 0 -40px;
-      position: absolute;
-    }
-  }
-  a {
-    cursor: pointer;
-  }
-  .title {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  p {
-    font-size: 16px;
   }
   @include media-breakpoint-up(md) {
     padding-top: 20px;
@@ -418,6 +374,9 @@ article {
     }
   }
 }
+
+
+
 
 .know-us {
   text-align: center; // position: absolute;
@@ -427,6 +386,7 @@ article {
   .box {
     
     .level-img {
+     
       // box-shadow: 5px 5px 5px 5px grey;
       border-radius: 50%; 
       height: 150px;
@@ -455,6 +415,9 @@ article {
       margin: 0 0 0 -40px;
       position: absolute;
     }
+    @include media-breakpoint-down(xs){
+      font-size: 18px;
+    }
   }
   a {
     cursor: pointer;
@@ -465,6 +428,9 @@ article {
   }
   .statement {
     font-size: 18px;
+    @include media-breakpoint-down(xs){
+      font-size: 15px;
+    }
   }
   p {
     font-size: 16px;
@@ -501,6 +467,9 @@ article {
       margin: 0 0 0 -40px;
       position: absolute;
     }
+    @include media-breakpoint-down(xs){
+      font-size: 18px;
+    }
   }
   .avatar-slide {
     position: absolute;
@@ -526,12 +495,21 @@ article {
       @include media-breakpoint-only(sm){
         max-width: 30%;
       }
+      @include media-breakpoint-only(xs){
+        max-width: 70%;
+      }
       &.avatar-img{
         position: relative;
         // top: -50px;
         @include media-breakpoint-only(sm){
           top: 15px;
           left: 180px;
+          
+        }
+        @include media-breakpoint-down(xs){
+          left: 50px;
+          top: 20px;
+          
         }
       }
     }
@@ -541,8 +519,17 @@ article {
       margin-top: 90px;
       @include media-breakpoint-only(sm){
         text-align: center;
+        .p-2{
+          margin-top: 0px;
+        }
       }
-      
+      @include media-breakpoint-down(xs){
+        font-size: 12px;
+        margin-top: 30px;
+        &.p-2{
+          margin-top: 0px;
+        }
+      }
     }
   }
   .avatar-list {
@@ -553,6 +540,9 @@ article {
     margin: auto;
     @include media-breakpoint-only(sm){
       top: 180px;
+    }
+    @include media-breakpoint-down(xs){
+      top: 330px;
     }
     li {
       height: 10px;
@@ -574,5 +564,8 @@ article {
 #news{
   p {
     font-size: 18px;
+    @include media-breakpoint-down(xs){
+      font-size: 15px;
+    }
   }
 }
