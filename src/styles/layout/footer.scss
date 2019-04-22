@@ -4,6 +4,10 @@ footer {
   font-size: 14px;
   display: block;
   width: 100%;
+  .map {
+    text-decoration: none;
+    color: #701104;
+  }
   img {
     max-width: 100%;
     filter: grayscale(100%);
