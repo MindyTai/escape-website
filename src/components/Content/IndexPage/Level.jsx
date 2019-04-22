@@ -51,7 +51,6 @@ class Level extends React.Component {
 
 
     window.onclick = function (event) {
-
       if (event.target == modal[0]) {
         modal[0].style.display = "none";
       } else if (event.target == modal[1]) {
@@ -59,11 +58,8 @@ class Level extends React.Component {
       } else if (event.target == modal[2]) {
         modal[2].style.display = "none";
       }
-
     }
   }
-
-
 
   render() {
 
@@ -99,10 +95,16 @@ class Level extends React.Component {
                         <div className="modal-header">
                           <span className="close">&times;</span>
                         </div>
-                        <div className="modal-body mb-5">
-                          <model-viewer src={data.model} alt="A 3D model" auto-rotate camera-controls background-color="#455A64" class="glb"></model-viewer>
-                          <p className="statement pt-3 pl-3 pr-3">{data.statement}</p>
-                          <div className="spin">模型可以旋轉喔!</div>
+                        <div className="modal-body">
+                          <div className="row">
+                            <div className="col-lg-6 col-md-6 col-sm-12">
+                              <p className="statement p-3">{data.statement}</p>
+                              {/* <div className="spin mb-3">模型可以互動喔!</div> */}
+                            </div>
+                            <div className="col-lg-6 col-md-6 col-sm-12">
+                              <model-viewer src={data.model} alt="A 3D model" auto-rotate camera-controls background-color="#455A64" class="glb"></model-viewer>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>

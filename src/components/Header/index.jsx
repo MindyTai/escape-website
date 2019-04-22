@@ -1,7 +1,6 @@
 import React from 'react'
 import $ from 'jquery'
 import logoUrl from  '../../img/logo.png'
-import  {a} from 'react-router-dom'
 
 
 class Header extends React.Component {
@@ -10,12 +9,13 @@ class Header extends React.Component {
     this.state = {
       hambergerBarOpened : false,
     }
-    // this._onClick = this.onClick.bind(this);
   }
 
 componentDidMount(){
   window.addEventListener("scroll",this.toggleLangSignIn)
+  // window.addEventListener("click",this.vanish);
   this.$page = $("html, body , document , window");
+  
 }
 
 componentWillUnmount(){
@@ -33,8 +33,9 @@ toggleLangSignIn(){
  }
 }
 
-// onClick ()  {
-//   this.$page.animate({scrollTop: 700}, 'slow')
+// vanish(){
+//   // const $nav = $(".nav-collapse active")
+//   document.getElementsByClassName("nav-collapse active").style.display = "none";
 // }
   
 render() {

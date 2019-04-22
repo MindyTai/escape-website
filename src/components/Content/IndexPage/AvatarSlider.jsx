@@ -13,7 +13,7 @@ class AvatarSlider extends React.Component {
   componentDidMount() {
     this.autoPlayInterval = setInterval(
       () => (this.changeToNextSlider())
-    ,5000)
+    ,2800)
   } 
 
   isActiveClass(i) {
