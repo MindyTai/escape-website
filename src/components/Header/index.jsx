@@ -13,7 +13,6 @@ class Header extends React.Component {
 
 componentDidMount(){
   window.addEventListener("scroll",this.toggleLangSignIn)
-  // window.addEventListener("click",this.vanish);
   this.$page = $("html, body , document , window");
   
 }
@@ -32,11 +31,6 @@ toggleLangSignIn(){
    $langSignIn.removeClass("active")
  }
 }
-
-// vanish(){
-//   // const $nav = $(".nav-collapse active")
-//   document.getElementsByClassName("nav-collapse active").style.display = "none";
-// }
   
 render() {
   const hambergerActiveClass = this.state.hambergerBarOpened ? "active": ""
@@ -45,7 +39,7 @@ render() {
       <div className="nav-bar m-0 p-0">
         <div className="container-fluid">
           <div className="row menu ml-0 mr-0">
-            <a href="/" className="col-sm-4 col-md-3 col-lg-3">
+            <a href="/escape-website" className="col-sm-4 col-md-3 col-lg-3">
               <img  
                src={logoUrl} 
                className="p-3"
