@@ -99,10 +99,9 @@ class Level extends React.Component {
                           <div className="row">
                             <div className="col-lg-6 col-md-6 col-sm-12">
                               <p className="statement p-3">{data.statement}</p>
-                              {/* <div className="spin mb-3">模型可以互動喔!</div> */}
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-12">
-                              <model-viewer src={data.model} alt="A 3D model" auto-rotate camera-controls background-color="#455A64" class="glb"></model-viewer>
+                              <model-viewer id="reveal" preload  poster={data.src} src={data.model} alt="A 3D model" auto-rotate camera-controls background-color="#455A64" class="glb"></model-viewer>
                             </div>
                           </div>
                         </div>
