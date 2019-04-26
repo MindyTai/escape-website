@@ -1,51 +1,56 @@
-import React from 'react'
-import $ from 'jquery'
+import React from 'react';
+import $ from 'jquery';
 
 class ScrollBtn extends React.Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
       display: false,
-    }
-    this._onClick = this.onClick.bind(this);
+    };
+    this.onClick = this.onClick.bind(this);
   }
 
-  componentDidMount(){
-    window.addEventListener("scroll",this.fadeInOutAnimate.bind(this))
-    this.$page = $("html, body , document , window");
+  componentDidMount() {
+    window.addEventListener('scroll', this.fadeInOutAnimate.bind(this));
+    this.$page = $('html, body , document , window');
   }
 
-  componentWillUnmount(){
-    window.removeEventListener('scroll',this.fadeInOutAnimate.bind(this))
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.fadeInOutAnimate.bind(this));
   }
 
-  fadeInOutAnimate(){
-    const scrollTop = $(window).scrollTop()
-    this.setState({ display: (scrollTop > 20) })
+
+  onClick() {
+    this.$page.animate({ scrollTop: 0 }, 'slow');
   }
 
-  isFadeInOutAnimate(){
-    return (this.state.display) === false ? "fadeOut" : "fadeIn"
+
+  isFadeInOutAnimate() {
+    const { display } = this.state;
+    return display === false ? 'fadeOut' : 'fadeIn';
   }
 
-  onClick(){
-    this.$page.animate({scrollTop: 0}, 'slow')
+  fadeInOutAnimate() {
+    const scrollTop = $(window).scrollTop();
+    this.setState({ display: (scrollTop > 20) });
   }
-    
+
+
   render() {
     return (
-      <div 
+      <button
+        type="button"
         id="scrollTop"
         className={`scrollup to-top text-center ${this.isFadeInOutAnimate()}`}
-        onClick={this._onClick}
-        >
-        <i 
-          className="fa fa-angle-up"  
-          aria-hidden="true">
-        </i>
-      </div> 
-      )
-    }
+        onClick={this.onClick}
+      >
+        <i
+          className="fa fa-angle-up"
+          aria-hidden="true"
+        />
+      </button>
+    );
+  }
 }
 
-export default ScrollBtn
+export default ScrollBtn;

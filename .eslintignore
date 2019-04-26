@@ -1,0 +1,17 @@
+# node_modules
+node_modules/
+
+# build
+build/
+
+# dist.
+dist/
+
+# serviceWorker
+src/registerServiceWorker.js
+# src/
+
+#scripts
+scripts/
+#config
+config/

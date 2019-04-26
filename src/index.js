@@ -1,15 +1,15 @@
 import './index.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import registerServiceWorker from './registerServiceWorker';
 import $ from 'jquery';
+import registerServiceWorker from './registerServiceWorker';
+
 import App from './App';
 
-window.$ = $
+window.$ = $;
 
 registerServiceWorker();
 
-$(function(){
-  //init react component
-  ReactDOM.render(<App />,document.getElementById('root'))
-})
+$(() => {
+  ReactDOM.render(<App />, document.getElementById('root'));
+});
