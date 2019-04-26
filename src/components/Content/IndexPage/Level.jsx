@@ -1,17 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 
-
-
 class Level extends React.Component {
   componentDidMount() {
     const modal = document.getElementsByClassName('modal');
-
-
     const btn = document.getElementsByClassName("myBtn");
     const span = document.getElementsByClassName("close");
-
-
 
     btn[0].onclick = () => {
       modal[0].style.display = "block";
@@ -37,10 +31,10 @@ class Level extends React.Component {
       modal[2].style.display = "block";
     }
 
-
     span[0].onclick = function () {
       modal[0].style.display = "none";
     }
+
     span[1].onclick = function () {
       modal[1].style.display = "none";
     }
@@ -48,7 +42,6 @@ class Level extends React.Component {
     span[2].onclick = function () {
       modal[2].style.display = "none";
     }
-
 
     window.onclick = function (event) {
       if (event.target == modal[0]) {
@@ -68,6 +61,7 @@ class Level extends React.Component {
       y: 300,
       z: 350
     }
+
     const { levelDatas } = this.props
 
     return (
@@ -90,7 +84,6 @@ class Level extends React.Component {
                     </a>
 
                     <div id={`myModal`} className={`modal`}>
-                      {/* Modal content  */}
                       <div className="modal-content">
                         <div className="modal-header">
                           <span className="close">&times;</span>

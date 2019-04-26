@@ -25,7 +25,6 @@ class Character extends React.Component {
                    
                   </a>
                   <div id="Modal" className="modal">
-                  {/* Modal content  */}
                     <div className="modal-content">
                       <div className="modal-header">
                         <span className="close">&times;</span>

@@ -4,7 +4,6 @@ import  {NavLink} from 'react-router-dom'
 
 const Footer = () => (
       <footer className="p-4" id="news">
- 
         <div className="row">
           <p className="company text-center pt-3 mx-auto col-lg-6 col-md-6 col-sm-12">
           《節點》│ 交大傳科系畢業成果展
@@ -24,7 +23,6 @@ const Footer = () => (
             <iframe width='100%' height='200' frameBorder='0' scrolling='no' marginHeight='0' marginWidth='0' src='https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=108台北市萬華區康定路173巷&z=16&output=embed&t='></iframe>
           </p>
         </div>
-     
     </footer>
 )
  

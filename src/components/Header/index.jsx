@@ -2,7 +2,6 @@ import React from 'react'
 import $ from 'jquery'
 import logoUrl from  '../../img/logo.png'
 
-
 class Header extends React.Component {
   constructor(props){
     super(props)
@@ -34,6 +33,7 @@ toggleLangSignIn(){
   
 render() {
   const hambergerActiveClass = this.state.hambergerBarOpened ? "active": ""
+  
   return (
     <header>   
       <div className="nav-bar m-0 p-0">

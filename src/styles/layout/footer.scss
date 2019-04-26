@@ -6,7 +6,7 @@ footer {
   width: 100%;
   .map {
     text-decoration: none;
-    color: #701104;
+    color: $brown;
   }
   img {
     max-width: 100%;
@@ -71,7 +71,7 @@ footer {
       .social-icons {
         .fa {
           color: $black;
-          border: $grey-75 2px solid;
+          border: $grey-100 2px solid;
           border-radius: 50%;
           height: 40px;
           width: 40px;

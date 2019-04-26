@@ -3,11 +3,9 @@ import PropTypes from 'prop-types'
 
 const About = (props) => {
   const { aboutDatas } = props
-
+  
   return (
-    
     <section className="about" id="about">
-     
       <h5 className="pt-5">我們的訴求</h5>
       <div className="icons mt-5">
         <div className="container">

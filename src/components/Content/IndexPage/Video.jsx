@@ -3,10 +3,8 @@ import PropTypes from 'prop-types'
 
 import video from '../../../video/promo2.mp4'
 
-class SwipeSlider extends React.Component {
+class Video extends React.Component {
   render() {
-    const { sliderDatas } = this.props
-
     return(
       <section className="swiper-slider">
         <video autoPlay muted playsInline loop id="myVideo">
@@ -22,16 +20,4 @@ class SwipeSlider extends React.Component {
   }
 }
 
-SwipeSlider.propTypes = {
-  sliderDatas: PropTypes.arrayOf(PropTypes.shape({
-    src: PropTypes.string,
-    alt: PropTypes.string,
-    href: PropTypes.string,
-  }))
-}
-
-SwipeSlider.defaultProps = {
-  sliderDatas: [],
-}
-
-export default SwipeSlider
+export default Video

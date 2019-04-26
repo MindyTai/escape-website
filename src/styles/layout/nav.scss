@@ -13,18 +13,18 @@
       display: block;
       text-align: center;
       text-decoration: none;
-      color: $grey-50;
+      color: $grey-100;
       cursor: pointer;
       white-space: nowrap;
       &:hover {
         text-decoration: none;
-        color:  #701104;;
+        color: $brown;;
       }
     }
     li {
       display: list-item;
       font-size: 14px;
-      color: $grey-50;
+      color: $grey-100;
       &:hover {
         color: $red;
       }
@@ -51,7 +51,7 @@
     a {
       text-decoration: none;
       &:hover {
-        color:  #701104;;
+        color: $brown;;
       }
     }
   }
@@ -75,7 +75,7 @@
       position: absolute;
       right: 0px;
       top: 0px;
-      background-color: #701104;
+      background-color:  $brown;
       cursor: pointer;
       &:before {
         content: " ";
@@ -142,12 +142,12 @@
       }
       li {
         display: block;
-        color: $grey-50;
+        color: $grey-100;
         font-size: 16px;
         cursor: pointer;
         a {
           margin: 14px;
-          color: $grey-50;
+          color: $grey-100;
           font-size: 14px;
         }
       }
