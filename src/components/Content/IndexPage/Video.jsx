@@ -3,7 +3,7 @@ import React from 'react';
 import video from '../../../video/promo2.mp4';
 
 const Video = () => (
-  <section className="swiper-slider">
+  <section className="video">
     <video autoPlay muted playsInline loop id="myVideo">
       <source src={video} type="video/mp4" />
     </video>

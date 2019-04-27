@@ -20,7 +20,7 @@ article {
   z-index: 2;
 }
 
-.swiper-slider {
+.video {
   height: 400px;
   width: 100%;
   position: relative;
@@ -46,7 +46,10 @@ article {
     }
     @include media-breakpoint-down(sm){
       position: relative;
-    }    
+    }   
+    @media (max-width: 350px) {
+      top: 20px;
+    } 
   }
 
   .typewriter {
@@ -90,7 +93,6 @@ article {
 }
 
 .about {
-  text-align: center; 
   background-color: #f7f7f7;
   width: 100%;
   color: $grey-100;
@@ -149,11 +151,9 @@ article {
 }
 
 .level {
-  text-align: center;
   background-color: #EFE9E7; 
   width: 100%;
   color: $grey-100;
-  
   .modal {
     display: none; 
     position: fixed;
@@ -228,9 +228,18 @@ article {
     padding: 0px;
     overflow: hidden;
     margin: auto;
+    width: 100%;
     .row {
       align-items: center;
       justify-content: center;
+      margin-left: 0px;
+      width: 100%;
+      .col-statement {
+        padding-right: 0px;
+        @media (max-width: 767px){
+          margin-right: 15px;
+        }
+      }
     }
   }
   .glb {
@@ -243,11 +252,6 @@ article {
       height: 200px;
       border-radius: 2%;
     }
-  }
-  button {
-    background-color: transparent;
-    outline: none;
-    border: none;
   }
   
   .box {
@@ -299,6 +303,15 @@ article {
   a {
     cursor: pointer;
   }
+  .bgBtn {
+    background-color: transparent;
+    outline: none;
+  }
+  .levelBox {
+    background-color: transparent;
+    outline: none;
+    border: none;
+  }
   .button {
     background-color: transparent;
     color: $brown;
@@ -318,6 +331,8 @@ article {
     color: white;
     }
   }
+  
+  
   .title {
     font-size: 18px;
     font-weight: bold;

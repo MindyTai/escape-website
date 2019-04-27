@@ -42,7 +42,7 @@ class Level extends React.Component {
               {
                 levelDatas.map((data, i) => (
                   <div key={data.src} className="col-sm-12 col-md-4 col-lg-4 p-4">
-                    <button type="button">
+                    <button type="button" className="levelBox">
                       <div className="box">
                         <img
                           src={data.src}
@@ -50,7 +50,7 @@ class Level extends React.Component {
                           alt={data.statement}
                         />
                       </div>
-                      <button type="button" className="button myBtn title mb-0 mt-5">{data.title}</button>
+                      <button type="button" className="button title mb-0 mt-5 bgBtn myBtn">{data.title}</button>
 
                     </button>
 
@@ -61,10 +61,10 @@ class Level extends React.Component {
                         </div>
                         <div className="modal-body">
                           <div className="row">
-                            <div className="col-lg-6 col-md-6 col-sm-12">
+                            <div className="col-lg-6 col-md-6 col-sm-12 col-statement">
                               <p className="statement p-3">{data.statement}</p>
                             </div>
-                            <div className="col-lg-6 col-md-6 col-sm-12">
+                            <div className="col-lg-6 col-md-6 col-sm-12 col-statement">
                               <model-viewer id="reveal" preload poster={data.src} src={data.model} alt="A 3D model" auto-rotate camera-controls background-color="#455A64" class="glb" />
                             </div>
                           </div>

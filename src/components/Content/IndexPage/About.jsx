@@ -12,7 +12,7 @@ const About = (props) => {
           <div className="row">
             {
               aboutDatas.map((data, i) => (
-                <p className="statement" id={i} key={data.statement}>{data.statement}</p>
+                <p className="statement ml-4 mr-4 mb-5" id={i} key={data.statement}>{data.statement}</p>
               ))
             }
           </div>
